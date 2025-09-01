@@ -14,7 +14,7 @@ public class AppSettings implements Serializable {
     private static volatile AppSettings instance;
     private final Properties props = new Properties();
 
-    public AppSettings() {
+    private AppSettings() {
         if (instance != null) {
             throw new RuntimeException("Use getInstance() instead");
         }
